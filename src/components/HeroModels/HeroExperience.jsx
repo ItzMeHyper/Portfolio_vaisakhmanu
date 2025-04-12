@@ -1,23 +1,24 @@
 import { OrbitControls } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { useRef } from 'react'
 
 const HeroExperience = () => {
-  const cubeRef = useRef()
-
-  useFrame(() => {
-    cubeRef.current.rotation.y += 0.01
-  })
-
+  const isTablet = false;
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
       <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
         <ambientLight intensity={0.2} color="#1a1a40"/>
-        <directionalLight position={[5, 5, 5]} intensity={1} />
+        <directionalLight position={[5, 5, 5]} intensity={5} />
         
-        <OrbitControls makeDefault enableDamping dampingFactor={0.1} />
+        <OrbitControls
+          enablePan={false}
+          enableZoom={!isTablet}
+          maxDistance={20}
+          minDistance={5}
+          minPolarAngle={Math.PI / 5}
+          maxPolarAngle={Math.PI / 2}
+        />
         
-        <mesh ref={cubeRef}>
+        <mesh>
           <boxGeometry args={[1, 1, 1]} />
           <meshStandardMaterial color="teal" />
         </mesh>
