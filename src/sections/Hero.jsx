@@ -31,7 +31,7 @@ const Hero = () => {
                         <h1>that Deliver Results</h1>
                     </div>
                     <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                        Hi, I'm Vaisakh, a passionate web developer with a knack for creating stunning and functional projects. I specialize in crafting user-friendly experiences that leave a lasting impression. Let's bring your ideas to life together!
+                        Hi, I'm Vaisakh, a passionate developer...
                     </p>
                     <Button 
                         className="md:w-80 md:h-16 w-60 h-12"
