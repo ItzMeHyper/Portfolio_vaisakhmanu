@@ -1,3 +1,5 @@
+import Button from "../components/Button.jsx";
+import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 import { words } from "../constants/index.js";
 
 const Hero = () => {
@@ -28,10 +30,22 @@ const Hero = () => {
                         <h1>into Real Projects</h1>
                         <h1>that Deliver Results</h1>
                     </div>
+                    <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+                        Hi, I'm Vaisakh, a passionate web developer with a knack for creating stunning and functional projects. I specialize in crafting user-friendly experiences that leave a lasting impression. Let's bring your ideas to life together!
+                    </p>
+                    <Button 
+                        className="md:w-80 md:h-16 w-60 h-12"
+                        id="button"
+                        text="See my works"
+                    />
                 </div>
             </header>
-            {/*RIGHT: Hero Image*/}
-
+            {/*RIGHT: 3D MODEL*/}
+            <figure>
+                <div className="hero-3d-layout">
+                    <HeroExperience />
+                </div>
+            </figure>
         </div>
     </section>
   )
