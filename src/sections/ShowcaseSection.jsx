@@ -6,7 +6,7 @@ const ShowcaseSection = () => {
           {/* LEFT */}
           <div className="first-project-wrapper">
             <div className="image-wrapper">
-              <img src="/images/project1.png" alt="DiscordBot" />
+              <img src="/images/project11.png" alt="DiscordBot" />
             </div>
             <div className="text-content">
               <h2>
@@ -19,7 +19,23 @@ const ShowcaseSection = () => {
               </p>
             </div>
           </div>
+          
           {/* RIGHT */}
+          <div className="project-list-wrapper overflow-hidden">
+            <div className="project">
+              <div className="image-wrapper bg-[#ffefdb]">
+                <img src="/images/project2.png" alt="StealthWebsite" />
+              </div>
+              <h2>Stealth Message</h2>
+            </div>
+
+            <div className="project">
+              <div className="image-wrapper bg-[#ffe7eb]">
+                <img src="/images/project3.png" alt="LangTranslatorWebsite" />
+              </div>
+              <h2>Simple Language Translator</h2>
+            </div>
+          </div>
         </div>
       </div>
     </div>
