@@ -24,14 +24,14 @@ const ShowcaseSection = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project">
               <div className="image-wrapper bg-[#ffefdb]">
-                <img src="/images/StealthMsg.png" alt="StealthWebsite" />
+                <img src="/images/pStealthMsg.png" alt="StealthWebsite" />
               </div>
               <h2>Stealth Message</h2>
             </div>
 
             <div className="project">
               <div className="image-wrapper bg-[#ffe7eb]">
-                <img src="/images/project3.png" alt="LangTranslatorWebsite" />
+                <img src="/images/pLangTranslator.png" alt="LangTranslatorWebsite" />
               </div>
               <h2>Simple Language Translator</h2>
             </div>
