@@ -1,13 +1,507 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/images/VMLogoWhite.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vaisakh Manu - PORTFOLIO</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaisakh Manu — Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="#home" class="logo"><span class="logo-mark">VM</span> Vaisakh Manu</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#certs">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="#" id="downloadCv">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 3v13m0 0l-4-4m4 4l4-4M5 21h14" />
+          </svg>
+          Download CV
+        </a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="badge"><span class="dot"></span> Final Year B.Tech CSE Student</div>
+          <h1>I build software<br>that solves <span class="accent-line">real problems.</span></h1>
+          <p class="lede">I'm Vaisakh Manu, a CSE student who enjoys turning ideas into working products — from a campus
+            collaboration app to a URL shortener, with a growing interest in cybersecurity along the way.</p>
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-solid">View My Work <svg width="15" height="15" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14m-6-6l6 6-6 6" />
+              </svg></a>
+            <a href="#contact" class="btn btn-outline">Let's Talk</a>
+          </div>
+          <div class="social-row">
+            <a class="icon-btn" href="https://github.com/ItzMeHyper" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.91c-2.78.62-3.37-1.36-3.37-1.36-.46-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.93.86.09-.66.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z" />
+              </svg>
+            </a>
+            <a class="icon-btn" href="https://linkedin.com/in/vaisakh-manu" target="_blank" rel="noopener"
+              aria-label="LinkedIn">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M6.94 5a2 2 0 11-4-.002 2 2 0 014 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-3.96 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.68-2.91V8.48z" />
+              </svg>
+            </a>
+            <a class="icon-btn" href="mailto:vaisakhmanu2004@gmail.com" aria-label="Email">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16v16H4V4z" />
+                <path d="M4 6l8 7 8-7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="glow-ring"></div>
+          <div class="hero-photo-wrap" id="heroPhotoWrap">
+            <img src="profile.jpg" alt="Vaisakh Manu" class="hero-photo" />
+          </div>
+          <div class="float-card fc-1">
+            <div class="num">3+</div>
+            <div class="lbl">Projects Built</div>
+          </div>
+          <div class="float-card fc-2">
+            <div class="num">3</div>
+            <div class="lbl">Internships</div>
+          </div>
+          <div class="float-card fc-3">
+            <div class="num">10+</div>
+            <div class="lbl">Certificates</div>
+          </div>
+
+          <div class="code-chip">
+            <div class="line"><span class="tick">✓</span> React Native</div>
+            <div class="line"><span class="tick">✓</span> Node.js + Supabase</div>
+            <div class="line"><span class="tick">✓</span> Clean, tested code</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT + EXPERTISE -->
+    <section class="about-sec" id="about">
+      <div class="wrap about-grid">
+        <div class="panel reveal">
+          <div class="sec-head" style="margin-bottom:20px;">
+            <h2><span class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+                </svg></span>About Me</h2>
+          </div>
+          <p class="about-text">Final-year Computer Science and Engineering student with hands-on experience across web
+            development, mobile apps, and cybersecurity fundamentals — gained through internships and academic projects
+            like a campus collaboration platform and a URL shortener built from the ground up.</p>
+          <div class="meta-grid">
+            <div class="meta-item">
+              <div class="mi-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+                </svg></div>
+              <div>
+                <div class="mi-label">Name</div>
+                <div class="mi-value">Vaisakh Manu</div>
+              </div>
+            </div>
+            <div class="meta-item">
+              <div class="mi-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M12 21s7-6.5 7-11.5A7 7 0 105 9.5C5 14.5 12 21 12 21z" />
+                  <circle cx="12" cy="9.5" r="2.3" />
+                </svg></div>
+              <div>
+                <div class="mi-label">Location</div>
+                <div class="mi-value">Idukki | Kottayam, Kerala</div>
+              </div>
+            </div>
+            <div class="meta-item">
+              <div class="mi-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M4 4h16v16H4V4z" />
+                  <path d="M4 6l8 7 8-7" />
+                </svg></div>
+              <div>
+                <div class="mi-label">Email</div>
+                <div class="mi-value">vaisakhmanu2004@gmail.com</div>
+              </div>
+            </div>
+            <div class="meta-item">
+              <div class="mi-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <circle cx="12" cy="12" r="9" />
+                </svg></div>
+              <div>
+                <div class="mi-label">Availability</div>
+                <div class="mi-value status-live"><span class="dot"></span> Open to opportunities</div>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-outline">More About Me <svg width="14" height="14" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14m-6-6l6 6-6 6" />
+            </svg></a>
+        </div>
+
+        <span id="skills" style="position:absolute;top:-80px;"></span>
+        <div class="panel reveal" id="skillsPanel">
+          <div class="sec-head" style="margin-bottom:20px;">
+            <h2><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                </svg></span>My Expertise</h2>
+          </div>
+          <div id="skills-list">
+            <div class="skill-row" data-pct="90">
+              <div class="skill-top"><span class="sk-name">JavaScript / TypeScript</span><span class="sk-pct">90%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+            <div class="skill-row" data-pct="82">
+              <div class="skill-top"><span class="sk-name">React / React Native</span><span class="sk-pct">82%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+            <div class="skill-row" data-pct="78">
+              <div class="skill-top"><span class="sk-name">Node.js</span><span class="sk-pct">78%</span></div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+            <div class="skill-row" data-pct="75">
+              <div class="skill-top"><span class="sk-name">Python / Java / C++</span><span class="sk-pct">75%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+            <div class="skill-row" data-pct="80">
+              <div class="skill-top"><span class="sk-name">Supabase / MongoDB</span><span class="sk-pct">80%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+            <div class="skill-row" data-pct="85">
+              <div class="skill-top"><span class="sk-name">HTML / CSS / Tailwind</span><span class="sk-pct">85%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects-sec" id="projects">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <h2><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+              </svg></span>Selected Work</h2>
+          <a href="https://github.com/ItzMeHyper" target="_blank" rel="noopener" class="more">View All Projects <svg
+              width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14m-6-6l6 6-6 6" />
+            </svg></a>
+        </div>
+        <div class="proj-grid">
+
+          <div class="proj-card reveal">
+            <div class="proj-thumb"><span class="proj-tag">Mobile App</span></div>
+            <div class="proj-body">
+              <h3>CampUS</h3>
+              <p>A production-ready campus collaboration platform for students, faculty, and alumni to connect, network,
+                and learn together.</p>
+              <div class="proj-foot">
+                <div class="proj-stack"><span class="stack-pill">React Native</span><span
+                    class="stack-pill">Expo</span><span class="stack-pill">Supabase</span></div>
+                <a class="proj-link" href="#" aria-label="Open project"><svg width="13" height="13" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M7 7h10v10" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card reveal">
+            <div class="proj-thumb"><span class="proj-tag">Web App</span></div>
+            <div class="proj-body">
+              <h3>SniprX</h3>
+              <p>A URL shortener built for everyone — shorten and manage links through a personal login, backed by a
+                full auth and API layer.</p>
+              <div class="proj-foot">
+                <div class="proj-stack"><span class="stack-pill">Next.js</span><span
+                    class="stack-pill">Tailwind</span><span class="stack-pill">Supabase</span></div>
+                <a class="proj-link" href="#" aria-label="Open project"><svg width="13" height="13" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M7 7h10v10" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card reveal">
+            <div class="proj-thumb"><span class="proj-tag">Automation</span></div>
+            <div class="proj-body">
+              <h3>Multi-Feature Discord Bot</h3>
+              <p>Server automation bot with custom commands, moderation features, and automated responses for community
+                management.</p>
+              <div class="proj-foot">
+                <div class="proj-stack"><span class="stack-pill">Discord.js</span><span
+                    class="stack-pill">Node.js</span></div>
+                <a class="proj-link" href="#" aria-label="Open project"><svg width="13" height="13" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M7 7h10v10" />
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-sec" id="process">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <h2><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M3 12h4l3 9 4-18 3 9h4" />
+              </svg></span>How I Work</h2>
+        </div>
+        <div class="process-track">
+          <div class="proc-step reveal">
+            <div class="proc-num">01</div>
+            <h4>Discover</h4>
+            <p>Understand the goal, users, and constraints before writing a line of code.</p>
+          </div>
+          <div class="proc-step reveal">
+            <div class="proc-num">02</div>
+            <h4>Plan</h4>
+            <p>Map the architecture, choose the stack, and scope the roadmap.</p>
+          </div>
+          <div class="proc-step reveal">
+            <div class="proc-num">03</div>
+            <h4>Design</h4>
+            <p>Sketch wireframes and interfaces focused on clarity over decoration.</p>
+          </div>
+          <div class="proc-step reveal">
+            <div class="proc-num">04</div>
+            <h4>Develop</h4>
+            <p>Write clean, maintainable code following best practices.</p>
+          </div>
+          <div class="proc-step reveal">
+            <div class="proc-num">05</div>
+            <h4>Test</h4>
+            <p>Check for bugs, performance issues, and cross-device behaviour.</p>
+          </div>
+          <div class="proc-step reveal">
+            <div class="proc-num">06</div>
+            <h4>Deploy</h4>
+            <p>Ship to production and keep an eye on how it holds up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTS + NUMBERS -->
+    <section class="split-sec" id="certs">
+      <div class="wrap split-grid">
+        <div class="panel reveal">
+          <div class="sec-head" style="margin-bottom:20px;">
+            <h2><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1 3-6z" />
+                </svg></span>Certificates</h2>
+          </div>
+          <div class="cert-list">
+            <div class="cert-item">
+              <div class="cert-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M4 4h16v16H4V4z" />
+                </svg></div>
+              <div>
+                <h4>NPTEL — Programming in Java</h4><span>77% · Elite + Silver</span>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M4 4h16v16H4V4z" />
+                </svg></div>
+              <div>
+                <h4>OpenAI — AI Foundations</h4><span>Completed</span>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M4 4h16v16H4V4z" />
+                </svg></div>
+              <div>
+                <h4>Unstop — Cybersecurity Mastery, Node JS, JS ES6 with AI</h4><span>Completed</span>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M4 4h16v16H4V4z" />
+                </svg></div>
+              <div>
+                <h4>Cisco — Networking Basics, Packet Tracer</h4><span>Completed</span>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M4 4h16v16H4V4z" />
+                </svg></div>
+              <div>
+                <h4>Infosys Springboard — DSA, Java, TypeScript, Software Engineering</h4><span>Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="num-grid reveal">
+          <div class="num-card">
+            <div class="num">3</div>
+            <div class="lbl">Internships</div>
+          </div>
+          <div class="num-card">
+            <div class="num">3+</div>
+            <div class="lbl">Projects Built</div>
+          </div>
+          <div class="num-card">
+            <div class="num">10+</div>
+            <div class="lbl">Certificates</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-sec" id="contact">
+      <div class="wrap">
+        <div class="contact-panel reveal">
+          <div class="contact-left">
+            <h2><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16v16H4V4z" />
+                <path d="M4 6l8 7 8-7" />
+              </svg> Let's Build Something Great</h2>
+            <p>Have an internship opportunity, a project, or just want to talk tech? I'd love to hear from you.</p>
+            <div class="contact-detail">
+              <div class="mi-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M4 4h16v16H4V4z" />
+                  <path d="M4 6l8 7 8-7" />
+                </svg></div>
+              <div>
+                <div class="mi-label">Email</div>
+                <div class="mi-value">vaisakhmanu2004@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="mi-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path
+                    d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.5 2.1L8 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.7.6a2 2 0 011.7 2.1z" />
+                </svg></div>
+              <div>
+                <div class="mi-label">Phone</div>
+                <div class="mi-value">+91 91883 60445</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="mi-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M12 21s7-6.5 7-11.5A7 7 0 105 9.5C5 14.5 12 21 12 21z" />
+                  <circle cx="12" cy="9.5" r="2.3" />
+                </svg></div>
+              <div>
+                <div class="mi-label">Location</div>
+                <div class="mi-value">Idukki | Kottayam, Kerala</div>
+              </div>
+            </div>
+          </div>
+          <form id="contactForm">
+            <div class="form-row">
+              <input type="text" placeholder="Your Name" required>
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <input type="text" placeholder="Subject">
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-solid" style="align-self:flex-start;">Send Message <svg width="14"
+                height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+              </svg></button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap"
+      style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;width:100%;">
+      <div class="footer-logo"><span class="logo-mark">VM</span> Vaisakh Manu</div>
+      <div class="footer-links">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <span class="foot-copy">© 2026 Vaisakh Manu. All rights reserved.</span>
+        <a href="#home" class="to-top" aria-label="Back to top"><svg width="15" height="15" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+          </svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
 </html>
