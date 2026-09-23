@@ -121,19 +121,13 @@ nav {
   font-weight: 600;
 }
 
-.logo-mark {
-  width: 36px;
+.logo-img {
   height: 36px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #06110d;
-  font-weight: 800;
-  font-size: 14px;
-  font-family: var(--sans);
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
+
 
 .nav-links {
   display: flex;
