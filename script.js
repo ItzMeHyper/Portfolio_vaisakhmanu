@@ -70,7 +70,12 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 });
 
 // CV download placeholder
-document.getElementById('downloadCv').addEventListener('click', function (e) {
-  e.preventDefault();
-  alert('Add your resume PDF link here to enable this button.');
+['downloadCv', 'downloadCvMobile'].forEach(id => {
+  const btn = document.getElementById(id);
+  if (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      alert('Add your resume PDF link here to enable this button.');
+    });
+  }
 });
