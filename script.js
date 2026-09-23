@@ -1,17 +1,27 @@
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
-navToggle.addEventListener('click', () => {
-  navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-  navLinks.style.flexDirection = 'column';
-  navLinks.style.position = 'absolute';
-  navLinks.style.top = '64px';
-  navLinks.style.right = '20px';
-  navLinks.style.background = 'rgba(7,11,20,0.97)';
-  navLinks.style.border = '1px solid var(--panel-border)';
-  navLinks.style.borderRadius = '14px';
-  navLinks.style.padding = '10px';
-});
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle('open');
+  });
+
+  // Close mobile nav when clicking anywhere outside or on a nav link
+  document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+      navLinks.classList.remove('open');
+    }
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+    });
+  });
+}
+
 
 // Active nav link on scroll
 const sections = document.querySelectorAll('main section[id]');
